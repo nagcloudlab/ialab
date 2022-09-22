@@ -7,11 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="data-structures" />
+        <module name="functional-programming" />
         <module name="transfer-service-v1" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="data-structures" target="17" />
+      <module name="functional-programming" target="17" />
+      <module name="FunctionalProgramming" target="17" />
       <module name="transfer-service-v1" target="11" />
     </bytecodeTargetLevel>
   </component>
