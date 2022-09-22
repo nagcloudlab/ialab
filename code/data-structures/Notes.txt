@@ -1,0 +1,74 @@
+
+
+-------------------------------------------------------------------------
+
+ 1. primary
+ 2. secondary
+
+      - linear
+            - array
+            - linkedlist
+
+
+-------------------------------------------------------------------------
+
+
+Types of collections from java community
+
+
+1. List
+
+    => index based
+    => to hold duplicate data elements
+    => ordered output
+
+2. Set
+
+    => Non-index
+    => Unique data elements
+
+3. Map
+
+    => To keep data elements with user-defined identity a.k.a key
+
+--------------------------------------------------------------------------
+
+
+Collection classes
+
+
+1.List
+
+    - Vector     - dynamic-array   ( thread-safe / synchronized / slow )
+        - Stack  - LIFO
+    - ArrayList  - dynamic-array
+    - LinkedList - DLL
+
+2. Set
+
+    - TreeSet    - b-tree ( sorted )
+    - HashSet    - hashtable  ( un-ordered )
+    - LinkedHashSet - hashtable += DLL ( ordered )
+
+3. Map
+
+    - TreeMap    - b-tree ( sorted )
+    - HashMap    - hashtable  ( un-ordered )
+    - LinkedHashMap - hashtable + DLL ( ordered )
+
+
+---------------------------------------------------------------------------------------
+
+
+
+Java Programming model
+--------------------------
+
+Top-Level    : Interface
+
+Middle-Level : Abstract-classes ( if required )
+
+Bottom-Level : Concrete/Implementation classes
+
+
+------------------------------------------------------------------------------------------
