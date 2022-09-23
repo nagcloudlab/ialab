@@ -8,7 +8,13 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Ex1 {
+/*
+
+    It enables to process collection of items in declarative style using Lambda-Expressions.
+
+ */
+
+public class Stream_Api_Intro {
 
     public static void main(String[] args) {
 
@@ -39,10 +45,9 @@ public class Ex1 {
         return menu
                 .stream()
                 .filter(d -> d.getCalories() < 400)
-                .sorted((d1, d2) -> Integer.compare(d1.getCalories(), d2.getCalories()))
-                .map(d -> d.getName())
+                .sorted(Comparator.comparing(Dish::getCalories))
+                .map(Dish::getName)
                 .collect(Collectors.toList());
-
     }
 
 }
