@@ -10,8 +10,10 @@ public class Ex1 {
 
 
         List<Dish> menu= Dish.menu;
+
         // get low-caloric ( < 400 ) dish names ( sorted caloric values )
 
+        // im here for any Q?
 
     }
 
