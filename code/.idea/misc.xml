@@ -6,6 +6,7 @@
         <option value="$PROJECT_DIR$/transfer-service-v1/pom.xml" />
         <option value="$PROJECT_DIR$/data-structures/pom.xml" />
         <option value="$PROJECT_DIR$/functional-programming/pom.xml" />
+        <option value="$PROJECT_DIR$/streams-api/pom.xml" />
       </list>
     </option>
   </component>
