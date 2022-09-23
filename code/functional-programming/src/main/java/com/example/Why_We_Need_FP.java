@@ -4,16 +4,17 @@ import com.example.model.Apple;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
-interface Predicate {
-    boolean test(Apple apple);
-}
 
 /*
 
     why we need functional programming ?
 
-    reason: to write compact / concise code
+    reason1: to write compact / concise code
+    reason2: with function composition, can build complex algorithms with small functions
+    reason3: for Lazy computation
+    reason4: for better concurrent/parallel application ( later )
 
  */
 
@@ -53,7 +54,7 @@ public class Why_We_Need_FP {
 
     }
 
-    private static List<Apple> filterApples(List<Apple> inventory, Predicate predicate) {
+    private static List<Apple> filterApples(List<Apple> inventory, Predicate<Apple> predicate) {
         List<Apple> filtered = new ArrayList<>();
         for (Apple apple : inventory) {
             if (predicate.test(apple)) {
