@@ -10,12 +10,14 @@
         <module name="functional-programming" />
         <module name="streams-api" />
         <module name="transfer-service-v1" />
+        <module name="mult-threading" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="data-structures" target="17" />
       <module name="functional-programming" target="17" />
       <module name="FunctionalProgramming" target="17" />
+      <module name="mult-threading" target="17" />
       <module name="streams-api" target="17" />
       <module name="transfer-service-v1" target="11" />
     </bytecodeTargetLevel>
