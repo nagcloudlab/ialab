@@ -1,6 +1,6 @@
 package com.example;
 
-import com.example.model.Dish;
+import com.model.Dish;
 
 import java.util.ArrayList;
 import java.util.Collections;
