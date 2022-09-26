@@ -87,6 +87,7 @@ public class PuttingIntoPractice {
         OptionalInt optional=
                 transactions
                         .stream()
+                        .filter(t->t.getValue()>2000)
                         .mapToInt(Transaction::getValue)
                         .max();
 
