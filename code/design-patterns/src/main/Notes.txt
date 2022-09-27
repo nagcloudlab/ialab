@@ -1,0 +1,21 @@
+
+
+Ex. Modern-Room
+
+    - door
+        - open()
+        - close()
+
+    - light
+        - on
+        - off
+
+    - fan
+        - on
+        - off
+
+
+condn: Must follow SOLID principles
+
+
+
