@@ -15,7 +15,7 @@ Ex. Modern-Room
         - off
 
 
-condn: Must follow SOLID principles
+condn: Must follow SOLID principles while design
 
 
 
