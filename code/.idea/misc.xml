@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/streams-api/pom.xml" />
         <option value="$PROJECT_DIR$/mult-threading/pom.xml" />
         <option value="$PROJECT_DIR$/design-patterns/pom.xml" />
+        <option value="$PROJECT_DIR$/exercises/pom.xml" />
       </list>
     </option>
   </component>
