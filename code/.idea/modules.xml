@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/arith/arith.iml" filepath="$PROJECT_DIR$/arith/arith.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/code.iml" filepath="$PROJECT_DIR$/.idea/code.iml" />
       <module fileurl="file://$PROJECT_DIR$/data-structures/data-structures.iml" filepath="$PROJECT_DIR$/data-structures/data-structures.iml" />
       <module fileurl="file://$PROJECT_DIR$/design-patterns/design-patterns.iml" filepath="$PROJECT_DIR$/design-patterns/design-patterns.iml" />
       <module fileurl="file://$PROJECT_DIR$/exercises/exercises.iml" filepath="$PROJECT_DIR$/exercises/exercises.iml" />
+      <module fileurl="file://$PROJECT_DIR$/finanance-app/finanance-app.iml" filepath="$PROJECT_DIR$/finanance-app/finanance-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/functional-programming/functional-programming.iml" filepath="$PROJECT_DIR$/functional-programming/functional-programming.iml" />
       <module fileurl="file://$PROJECT_DIR$/mult-threading/mult-threading.iml" filepath="$PROJECT_DIR$/mult-threading/mult-threading.iml" />
       <module fileurl="file://$PROJECT_DIR$/streams-api/streams-api.iml" filepath="$PROJECT_DIR$/streams-api/streams-api.iml" />

@@ -1,6 +1,7 @@
 package com.example.repository;
 
 import com.example.model.Account;
+import org.apache.log4j.Logger;
 
 /**
  *
@@ -10,19 +11,21 @@ import com.example.model.Account;
 
 public class JdbcAccountRepository implements AccountRepository{
 
+    private static final Logger LOGGER=Logger.getLogger("ts"); // singleton
+
     public JdbcAccountRepository() {
-        System.out.println("JdbcAccountRepository instance created.");
+        LOGGER.debug("JdbcAccountRepository instance created.");
     }
 
     public Account loadAccount(String number) {
         // TODO
-        System.out.println("Loading account " + number);
+        LOGGER.info("Loading account " + number);
         return new Account(number, 1000.00);
     }
 
     public void updateAccount(Account account) {
         // TODO
-        System.out.println("updating account " + account.getNumber());
+        LOGGER.info("updating account " + account.getNumber());
     }
 
 

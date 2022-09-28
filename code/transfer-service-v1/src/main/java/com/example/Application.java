@@ -10,31 +10,20 @@ public class Application {
 
     public static void main(String[] args) {
 
-//        // phase-1 : init / booting
-//        AccountRepository jdbcAccountRepository=new JdbcAccountRepository();
-//        AccountRepository jpaAccountRepository=new JpaAccountRepository();
-//        TransferService transferService = new UPITransferService(jpaAccountRepository);
-//
-//        System.out.println("-".repeat(100));
-//
-//        //phase-2 : use
-//        transferService.transfer(100.00, "1", "2");
-//        System.out.println("-".repeat(50));
-//        transferService.transfer(100.00, "1", "2");
-//
-//        System.out.println("-".repeat(100));
-//        //phase-3 : Destroy
-//        // proper clean-up
+        // phase-1 : init / booting
+        AccountRepository jdbcAccountRepository = new JdbcAccountRepository();
+//        AccountRepository jpaAccountRepository = new JpaAccountRepository();
+        TransferService transferService = new UPITransferService(jdbcAccountRepository);
 
-        StringBuffer sb1 = new StringBuffer("Nag");
+        System.out.println("-".repeat(100));
 
-        StringBuffer sb2= new StringBuffer("Nag");
+        //phase-2 : use
+        transferService.transfer(100.00, "1", "2");
+        System.out.println("-".repeat(50));
 
-
-        System.out.println(sb1==sb2);
-
-        System.out.println(sb1.equals(sb2));
-
+        System.out.println("-".repeat(100));
+        //phase-3 : Destroy
+        // proper clean-up
 
 
     }

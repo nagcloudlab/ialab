@@ -6,19 +6,23 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="arith" />
         <module name="functional-programming" />
         <module name="transfer-service-v1" />
         <module name="exercises" />
         <module name="mult-threading" />
         <module name="data-structures" />
         <module name="streams-api" />
+        <module name="finanance-app" />
         <module name="design-patterns" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="arith" target="11" />
       <module name="data-structures" target="17" />
       <module name="design-patterns" target="17" />
       <module name="exercises" target="17" />
+      <module name="finanance-app" target="11" />
       <module name="functional-programming" target="17" />
       <module name="FunctionalProgramming" target="17" />
       <module name="mult-threading" target="17" />

@@ -10,6 +10,8 @@
         <option value="$PROJECT_DIR$/mult-threading/pom.xml" />
         <option value="$PROJECT_DIR$/design-patterns/pom.xml" />
         <option value="$PROJECT_DIR$/exercises/pom.xml" />
+        <option value="$PROJECT_DIR$/arith/pom.xml" />
+        <option value="$PROJECT_DIR$/finanance-app/pom.xml" />
       </list>
     </option>
   </component>
