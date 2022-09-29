@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/functional-programming/functional-programming.iml" filepath="$PROJECT_DIR$/functional-programming/functional-programming.iml" />
       <module fileurl="file://$PROJECT_DIR$/mult-threading/mult-threading.iml" filepath="$PROJECT_DIR$/mult-threading/mult-threading.iml" />
       <module fileurl="file://$PROJECT_DIR$/streams-api/streams-api.iml" filepath="$PROJECT_DIR$/streams-api/streams-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testing/testing.iml" filepath="$PROJECT_DIR$/testing/testing.iml" />
       <module fileurl="file://$PROJECT_DIR$/transfer-service-v1/transfer-service-v1.iml" filepath="$PROJECT_DIR$/transfer-service-v1/transfer-service-v1.iml" />
     </modules>
   </component>

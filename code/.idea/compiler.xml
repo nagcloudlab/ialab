@@ -11,6 +11,7 @@
         <module name="transfer-service-v1" />
         <module name="exercises" />
         <module name="mult-threading" />
+        <module name="testing" />
         <module name="data-structures" />
         <module name="streams-api" />
         <module name="finanance-app" />
@@ -27,6 +28,7 @@
       <module name="FunctionalProgramming" target="17" />
       <module name="mult-threading" target="17" />
       <module name="streams-api" target="17" />
+      <module name="testing" target="11" />
       <module name="transfer-service-v1" target="11" />
     </bytecodeTargetLevel>
   </component>
