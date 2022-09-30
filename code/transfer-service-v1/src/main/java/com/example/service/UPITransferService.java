@@ -26,7 +26,6 @@ public class UPITransferService implements TransferService {
 
         LOGGER.info("Transfer initiated..");
 
-
         // Load source & destination account details
         Account sourceAccount = accountRepository.loadAccount(source);
         Account destinationAccount = accountRepository.loadAccount(destination);
