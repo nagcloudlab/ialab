@@ -52,9 +52,9 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.22.2</version>
-                <configuration>
-                    <groups>auth</groups>
-                </configuration>
+<!--                <configuration>-->
+<!--                    <groups>auth</groups>-->
+<!--                </configuration>-->
             </plugin>
         </plugins>
     </build>
