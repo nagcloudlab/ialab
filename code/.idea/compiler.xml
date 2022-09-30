@@ -7,6 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="arith" />
+        <module name="play-with-java" />
+        <module name="todos-console-app" />
         <module name="functional-programming" />
         <module name="transfer-service-v1" />
         <module name="exercises" />
@@ -27,8 +29,10 @@
       <module name="functional-programming" target="17" />
       <module name="FunctionalProgramming" target="17" />
       <module name="mult-threading" target="17" />
+      <module name="play-with-java" target="17" />
       <module name="streams-api" target="17" />
       <module name="testing" target="11" />
+      <module name="todos-console-app" target="17" />
       <module name="transfer-service-v1" target="11" />
     </bytecodeTargetLevel>
   </component>
