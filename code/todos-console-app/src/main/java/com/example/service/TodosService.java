@@ -3,11 +3,19 @@ package com.example.service;
 import com.example.model.Todo;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class TodosService {
 
+    private static Long nextId;
+
     public void addTodo(String newTitle) {
-        //TODO Auto-generated method stub
+        nextId++; // increment
+        Todo todo = new Todo();
+        todo.setId(String.valueOf(nextId));
+        todo.setTitle(newTitle);
+        todo.setCompleted(false);
+
     }
 
     public void deleteTodo(String id) {
@@ -31,7 +39,15 @@ public class TodosService {
     }
 
     public List<Todo> getTodos(TodoFilter filter) {
-        //TODO Auto-generated method stub
-        return null;
+        return List.of(new Todo())
+                .stream()
+                .filter(todo -> {
+                    if (filter.equals(TodoFilter.COMPLETED))
+                        return todo.isCompleted();
+                    else if (filter.equals(TodoFilter.ACTIVE))
+                        return !todo.isCompleted();
+                    return true;
+                })
+                .collect(Collectors.toList());
     }
 }
