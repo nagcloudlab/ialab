@@ -16,4 +16,8 @@ public class CalcTest {
     public void addTest(){
         assertEquals(10, calc.add(5,5));
     }
+    @Test
+    public void subTest(){
+        assertEquals(0, calc.sub(5,5));
+    }
 }
