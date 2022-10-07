@@ -7,14 +7,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="arith" />
-        <module name="play-with-java" />
         <module name="todos-console-app" />
-        <module name="functional-programming" />
+        <module name="jpa-intro" />
         <module name="transfer-service-v1" />
+        <module name="testing" />
+        <module name="jdbc-api" />
+        <module name="data-structures" />
+        <module name="play-with-java" />
+        <module name="functional-programming" />
         <module name="exercises" />
         <module name="mult-threading" />
-        <module name="testing" />
-        <module name="data-structures" />
         <module name="streams-api" />
         <module name="finanance-app" />
         <module name="design-patterns" />
@@ -28,6 +30,8 @@
       <module name="finanance-app" target="11" />
       <module name="functional-programming" target="17" />
       <module name="FunctionalProgramming" target="17" />
+      <module name="jdbc-api" target="11" />
+      <module name="jpa-intro" target="11" />
       <module name="mult-threading" target="17" />
       <module name="play-with-java" target="17" />
       <module name="streams-api" target="17" />

@@ -9,6 +9,8 @@
       <module fileurl="file://$PROJECT_DIR$/exercises/exercises.iml" filepath="$PROJECT_DIR$/exercises/exercises.iml" />
       <module fileurl="file://$PROJECT_DIR$/finanance-app/finanance-app.iml" filepath="$PROJECT_DIR$/finanance-app/finanance-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/functional-programming/functional-programming.iml" filepath="$PROJECT_DIR$/functional-programming/functional-programming.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jdbc-api/jdbc-api.iml" filepath="$PROJECT_DIR$/jdbc-api/jdbc-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jpa-intro/jpa-intro.iml" filepath="$PROJECT_DIR$/jpa-intro/jpa-intro.iml" />
       <module fileurl="file://$PROJECT_DIR$/mult-threading/mult-threading.iml" filepath="$PROJECT_DIR$/mult-threading/mult-threading.iml" />
       <module fileurl="file://$PROJECT_DIR$/play-with-java/play-with-java.iml" filepath="$PROJECT_DIR$/play-with-java/play-with-java.iml" />
       <module fileurl="file://$PROJECT_DIR$/streams-api/streams-api.iml" filepath="$PROJECT_DIR$/streams-api/streams-api.iml" />
