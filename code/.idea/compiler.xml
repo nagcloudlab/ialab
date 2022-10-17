@@ -24,19 +24,19 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="arith" target="11" />
-      <module name="data-structures" target="17" />
-      <module name="design-patterns" target="17" />
-      <module name="exercises" target="17" />
+      <module name="data-structures" target="19" />
+      <module name="design-patterns" target="19" />
+      <module name="exercises" target="19" />
       <module name="finanance-app" target="11" />
-      <module name="functional-programming" target="17" />
+      <module name="functional-programming" target="19" />
       <module name="FunctionalProgramming" target="17" />
       <module name="jdbc-api" target="11" />
       <module name="jpa-intro" target="11" />
-      <module name="mult-threading" target="17" />
-      <module name="play-with-java" target="17" />
-      <module name="streams-api" target="17" />
+      <module name="mult-threading" target="19" />
+      <module name="play-with-java" target="19" />
+      <module name="streams-api" target="19" />
       <module name="testing" target="11" />
-      <module name="todos-console-app" target="17" />
+      <module name="todos-console-app" target="19" />
       <module name="transfer-service-v1" target="11" />
     </bytecodeTargetLevel>
   </component>

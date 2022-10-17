@@ -1,9 +1,12 @@
 package com.example.model;
 
 public class Todo {
+
     private String id;
     private String title;
     private boolean completed;
+
+    private User user;
 
     public Todo(){}
 

@@ -7,6 +7,8 @@ import java.util.stream.Collectors;
 
 public class TodosService {
 
+    private String loggedUserName="tom";
+
     private static Long nextId;
 
     public void addTodo(String newTitle) {
