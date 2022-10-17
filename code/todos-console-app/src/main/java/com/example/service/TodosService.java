@@ -1,23 +1,28 @@
 package com.example.service;
 
-import com.example.model.Todo;
+import com.example.entity.Todo;
+import com.example.entity.TodoType;
+import com.example.entity.User;
+import com.example.repository.TodosRepository;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class TodosService {
 
-    private String loggedUserName="tom";
+    private int loggedUserId=2; // e.g Tom
 
-    private static Long nextId;
+    TodosRepository todosRepository=new TodosRepository();
 
     public void addTodo(String newTitle) {
-        nextId++; // increment
         Todo todo = new Todo();
-        todo.setId(String.valueOf(nextId));
         todo.setTitle(newTitle);
         todo.setCompleted(false);
-
+        todo.setType(TodoType.OFFICE);
+        User user = new User();
+        user.setId(loggedUserId);
+        todo.setUser(user);
+        todosRepository.save(todo);
     }
 
     public void deleteTodo(String id) {

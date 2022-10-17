@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="todos_db@localhost" uuid="6c533231-ae40-4db6-83be-e464c94c6484">
+    <data-source source="LOCAL" name="myPU/Hibernate" uuid="e90fe638-3368-425e-b2a6-4de3dd8b5e9c">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+/home/nag/tng/ialab/code/jpa-intro/src/main/resources/META-INF/persistence.xml</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/todos_db</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/review-db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

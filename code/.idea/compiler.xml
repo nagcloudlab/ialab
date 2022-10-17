@@ -36,7 +36,7 @@
       <module name="play-with-java" target="19" />
       <module name="streams-api" target="19" />
       <module name="testing" target="11" />
-      <module name="todos-console-app" target="19" />
+      <module name="todos-console-app" target="11" />
       <module name="transfer-service-v1" target="11" />
     </bytecodeTargetLevel>
   </component>
