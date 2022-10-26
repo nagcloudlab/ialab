@@ -8,7 +8,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="arith" />
         <module name="todos-console-app" />
-        <module name="jpa-intro" />
         <module name="transfer-service-v1" />
         <module name="testing" />
         <module name="jdbc-api" />
@@ -18,26 +17,14 @@
         <module name="exercises" />
         <module name="mult-threading" />
         <module name="streams-api" />
+        <module name="JPA-intro" />
         <module name="finanance-app" />
         <module name="design-patterns" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="arith" target="11" />
-      <module name="data-structures" target="19" />
-      <module name="design-patterns" target="19" />
-      <module name="exercises" target="19" />
-      <module name="finanance-app" target="11" />
-      <module name="functional-programming" target="19" />
       <module name="FunctionalProgramming" target="17" />
-      <module name="jdbc-api" target="11" />
       <module name="jpa-intro" target="11" />
-      <module name="mult-threading" target="19" />
-      <module name="play-with-java" target="19" />
-      <module name="streams-api" target="19" />
-      <module name="testing" target="11" />
-      <module name="todos-console-app" target="11" />
-      <module name="transfer-service-v1" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
