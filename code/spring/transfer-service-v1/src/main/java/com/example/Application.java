@@ -1,14 +1,12 @@
 package com.example;
 
-import com.example.repository.AccountRepository;
-import com.example.repository.JdbcAccountRepository;
-import com.example.repository.JpaAccountRepository;
+import com.example.config.ApplicationConfiguration;
 import com.example.service.TransferService;
 import com.example.service.UPITransferService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Application {
 
@@ -19,12 +17,13 @@ public class Application {
         log.info("-------------------------------------------------------");
 
         ConfigurableApplicationContext applicationContext =
-                new ClassPathXmlApplicationContext("transfer-service.xml");
+                // new ClassPathXmlApplicationContext("transfer-service.xml");
+                new AnnotationConfigApplicationContext(ApplicationConfiguration.class);
 
         log.info("-------------------------------------------------------");
 
-        TransferService transferService=applicationContext.getBean("transferService",TransferService.class);
-        transferService.transfer(50.00, "1", "2");
+        TransferService transferService1=applicationContext.getBean("transferService",TransferService.class);
+        transferService1.transfer(100.00,"1","2");
 
         log.info("-------------------------------------------------------");
 

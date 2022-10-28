@@ -4,12 +4,20 @@ import com.example.entity.Account;
 import com.example.service.UPITransferService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
-public class JdbcAccountRepository implements AccountRepository{
+import javax.sql.DataSource;
+
+@Component
+public class JdbcAccountRepository implements AccountRepository {
 
     private static final Logger log = LoggerFactory.getLogger(UPITransferService.class);
+    private DataSource dataSource;
 
-    public JdbcAccountRepository() {
+    @Autowired
+    public JdbcAccountRepository(DataSource dataSource) {
+        this.dataSource = dataSource;
         log.info("JdbcAccountRepository component created");
     }
 
