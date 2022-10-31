@@ -6,13 +6,15 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
 
-@Component
+//@Component
+@Repository
 public class JdbcAccountRepository implements AccountRepository {
 
-    private static final Logger log = LoggerFactory.getLogger(UPITransferService.class);
+    private static final Logger log = LoggerFactory.getLogger(JdbcAccountRepository.class);
     private DataSource dataSource;
 
     @Autowired

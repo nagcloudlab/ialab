@@ -26,6 +26,7 @@ public class Application {
         transferService1.transfer(100.00,"1","2");
 
         log.info("-------------------------------------------------------");
+        applicationContext.close();
 
 
     }

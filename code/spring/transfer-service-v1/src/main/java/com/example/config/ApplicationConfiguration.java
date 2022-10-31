@@ -16,8 +16,11 @@ import javax.sql.DataSource;
 @ComponentScan(
         basePackages = {
                 "com.example.repository",
-                "com.example.service"
+                "com.example.service",
+                "com.example.config",
+                "com.example.aspects"
         })
+@EnableAspectJAutoProxy
 @PropertySource("classpath:transfer.properties")
 public class ApplicationConfiguration {
 
