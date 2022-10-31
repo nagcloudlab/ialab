@@ -6,6 +6,7 @@ import com.example.service.TransferService;
 import com.example.service.UPITransferService;
 import org.apache.commons.dbcp.BasicDataSource;
 import org.springframework.context.annotation.*;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
 
@@ -21,6 +22,7 @@ import javax.sql.DataSource;
                 "com.example.aspects"
         })
 @EnableAspectJAutoProxy
+@EnableTransactionManagement
 @PropertySource("classpath:transfer.properties")
 public class ApplicationConfiguration {
 

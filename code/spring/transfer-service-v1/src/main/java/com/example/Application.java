@@ -23,7 +23,7 @@ public class Application {
         log.info("-------------------------------------------------------");
 
         TransferService transferService1=applicationContext.getBean("transferService",TransferService.class);
-        transferService1.transfer(100.00,"1","2");
+        transferService1.transfer(800.00,"1","2");
 
         log.info("-------------------------------------------------------");
         applicationContext.close();
