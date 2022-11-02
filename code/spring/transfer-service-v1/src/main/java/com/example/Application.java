@@ -1,29 +1,37 @@
 package com.example;
 
-import com.example.config.ApplicationConfiguration;
 import com.example.service.TransferService;
 import com.example.service.UPITransferService;
+import com.foo.FooConfiguration;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 
+@Slf4j
+@Configuration
+@EnableAutoConfiguration
+@ComponentScan
 public class Application {
 
-    private static final Logger log = LoggerFactory.getLogger(UPITransferService.class);
 
     public static void main(String[] args) {
 
         log.info("-------------------------------------------------------");
 
         ConfigurableApplicationContext applicationContext =
-                // new ClassPathXmlApplicationContext("transfer-service.xml");
-                new AnnotationConfigApplicationContext(ApplicationConfiguration.class);
+                SpringApplication.run(Application.class, args);
 
         log.info("-------------------------------------------------------");
 
-        TransferService transferService1=applicationContext.getBean("transferService",TransferService.class);
-        transferService1.transfer(800.00,"1","2");
+        TransferService transferService =
+                applicationContext.getBean(TransferService.class);
+        transferService.transfer(100,"1","2");
 
         log.info("-------------------------------------------------------");
         applicationContext.close();

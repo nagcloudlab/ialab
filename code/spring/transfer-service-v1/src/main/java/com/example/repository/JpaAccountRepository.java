@@ -2,6 +2,7 @@ package com.example.repository;
 
 import com.example.entity.Account;
 import com.example.service.UPITransferService;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,10 +14,9 @@ import javax.persistence.PersistenceContext;
 import javax.sql.DataSource;
 
 //@Component
+@Slf4j
 @Repository
 public class JpaAccountRepository implements AccountRepository {
-
-    private static final Logger log = LoggerFactory.getLogger(JpaAccountRepository.class);
 
     @PersistenceContext
     private EntityManager entityManager;
