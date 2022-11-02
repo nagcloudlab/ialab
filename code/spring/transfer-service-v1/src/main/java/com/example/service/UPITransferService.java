@@ -32,7 +32,7 @@ public class UPITransferService implements TransferService {
 
     @Autowired
     public UPITransferService(
-            @Qualifier("jpaAccountRepository") AccountRepository accountRepository,
+            AccountRepository accountRepository,
             TransactionRepository transactionRepository) {
         this.accountRepository = accountRepository;
         this.transactionRepository = transactionRepository;
@@ -61,16 +61,18 @@ public class UPITransferService implements TransferService {
     public void transfer(double amount, String source, String destination) {
         log.info("Transfer initiated");
         System.out.println(dailyLimit);
-        Account sourceAccount = accountRepository.loadAccount(source);
-        if(sourceAccount.getBalance()<amount)
+        Account sourceAccount = accountRepository.findById(source)
+                .orElseThrow(() -> new RuntimeException("Source account not found"));
+        if (sourceAccount.getBalance() < amount)
             throw new RuntimeException("Insufficient balance");
-        Account destinationAccount = accountRepository.loadAccount(destination);
+        Account destinationAccount = accountRepository.findById(destination)
+                .orElseThrow(() -> new RuntimeException("Destination account not found"));
         sourceAccount.setBalance(sourceAccount.getBalance() - amount);
         destinationAccount.setBalance(destinationAccount.getBalance() + amount);
-        accountRepository.updateAccount(sourceAccount);
+        accountRepository.save(sourceAccount);
         if (1 != 1)
             throw new IllegalStateException("oops");
-        accountRepository.updateAccount(destinationAccount);
+        accountRepository.save(destinationAccount);
 
         Transaction debitTransaction = new Transaction();
         debitTransaction.setType(TransactionType.DEBIT);

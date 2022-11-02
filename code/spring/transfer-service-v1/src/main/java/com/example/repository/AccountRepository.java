@@ -1,8 +1,7 @@
 package com.example.repository;
 
 import com.example.entity.Account;
+import org.springframework.data.repository.CrudRepository;
 
-public interface AccountRepository {
-    Account loadAccount(String number);
-    void updateAccount(Account account);
+public interface AccountRepository extends CrudRepository<Account,String> {
 }

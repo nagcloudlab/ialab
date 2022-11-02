@@ -1,10 +1,14 @@
 package com.example.repository;
 
 import com.example.entity.Transaction;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.CrudRepository;
 
-public interface TransactionRepository {
+import java.util.List;
 
-    void save(Transaction transaction);
+public interface TransactionRepository extends CrudRepository<Transaction,Integer> {
 
+    @Query("from Transaction t where t.account.number=:number")
+    List<Transaction> findByAccount(String number);
 
 }
