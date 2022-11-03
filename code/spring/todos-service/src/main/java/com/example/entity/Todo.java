@@ -3,6 +3,8 @@ package com.example.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.time.LocalDate;
+import java.util.List;
 
 @Data
 @Entity
@@ -13,6 +15,8 @@ public class Todo {
     int id;
     private String title;
     private boolean completed;
+//    private LocalDate date;
+//    private List<String> tags;
     @ManyToOne
     @JoinColumn(name="user_id")
     private User user;
