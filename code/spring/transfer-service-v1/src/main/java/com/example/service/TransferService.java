@@ -1,5 +1,7 @@
 package com.example.service;
 
+import com.example.dto.TransferStatus;
+
 public interface TransferService {
-    void transfer(double amount,String source, String destination);
+    TransferStatus transfer(double amount, String source, String destination);
 }

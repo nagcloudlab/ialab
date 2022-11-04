@@ -25,6 +25,7 @@ public class Application {
     public static void main(String[] args) {
 
         log.info("-------------------------------------------------------");
+
         ConfigurableApplicationContext applicationContext =
                 SpringApplication.run(Application.class, args);
 

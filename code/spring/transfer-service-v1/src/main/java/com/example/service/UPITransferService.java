@@ -1,8 +1,11 @@
 package com.example.service;
 
+import com.example.dto.TransferStatus;
 import com.example.entity.Account;
 import com.example.entity.Transaction;
 import com.example.entity.TransactionType;
+import com.example.exception.AccountBalanceException;
+import com.example.exception.AccountNotFoundException;
 import com.example.repository.AccountRepository;
 import com.example.repository.TransactionRepository;
 import lombok.extern.slf4j.Slf4j;
@@ -58,15 +61,15 @@ public class UPITransferService implements TransferService {
             propagation = Propagation.REQUIRED,
             readOnly = false
     )
-    public void transfer(double amount, String source, String destination) {
+    public TransferStatus transfer(double amount, String source, String destination) {
         log.info("Transfer initiated");
         System.out.println(dailyLimit);
         Account sourceAccount = accountRepository.findById(source)
-                .orElseThrow(() -> new RuntimeException("Source account not found"));
+                .orElseThrow(() -> new AccountNotFoundException("Source account not found"));
         if (sourceAccount.getBalance() < amount)
-            throw new RuntimeException("Insufficient balance");
+            throw new AccountBalanceException("Insufficient balance");
         Account destinationAccount = accountRepository.findById(destination)
-                .orElseThrow(() -> new RuntimeException("Destination account not found"));
+                .orElseThrow(() -> new AccountNotFoundException("Destination account not found"));
         sourceAccount.setBalance(sourceAccount.getBalance() - amount);
         destinationAccount.setBalance(destinationAccount.getBalance() + amount);
         accountRepository.save(sourceAccount);
@@ -86,9 +89,14 @@ public class UPITransferService implements TransferService {
         creditTransaction.setDate(new Date());
         creditTransaction.setAccount(destinationAccount);
 
-        transactionRepository.save(debitTransaction);
+        Transaction debitTxn = transactionRepository.save(debitTransaction);
         transactionRepository.save(creditTransaction);
 
+        TransferStatus transferStatus = new TransferStatus();
+        transferStatus.setStatus("success");
+        transferStatus.setTxnId(String.valueOf(debitTxn.getId()));
+
         log.info("Transfer completed");
+        return transferStatus;
     }
 }
