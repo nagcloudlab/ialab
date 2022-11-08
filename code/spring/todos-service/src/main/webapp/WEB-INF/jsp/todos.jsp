@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
 </head>
 <body class="container">
-
 <div class="display-1">todos</div>
 <hr/>
-
+Welcome : <span class="text text-danger">${user}</span>
+<a href="/logout">logout</a>
 <div class="row">
     <div class="col-2"></div>
     <div class="col-8">

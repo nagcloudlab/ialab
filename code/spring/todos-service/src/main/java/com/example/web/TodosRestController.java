@@ -21,11 +21,11 @@ public class TodosRestController {
     private static Map<Integer, Todo> todos = new HashMap<>();
 
     static {
-        todos.put(1, new Todo(1, "Learn Spring MVC", false, TodoType.OFFICE));
-        todos.put(2, new Todo(2, "Learn Java", false, TodoType.OFFICE));
-        todos.put(3, new Todo(3, "Learn React", false, TodoType.OFFICE));
-        todos.put(4, new Todo(4, "Learn Microservices", false, TodoType.OFFICE));
-        todos.put(5, new Todo(5, "get rice bag", false, TodoType.HOME));
+        todos.put(1, new Todo(1, "Learn Spring MVC", false, TodoType.OFFICE,null));
+        todos.put(2, new Todo(2, "Learn Java", false, TodoType.OFFICE,null));
+        todos.put(3, new Todo(3, "Learn React", false, TodoType.OFFICE,null));
+        todos.put(4, new Todo(4, "Learn Microservices", false, TodoType.OFFICE,null));
+        todos.put(5, new Todo(5, "get rice bag", false, TodoType.HOME,null));
     }
 
     // Read
@@ -103,7 +103,7 @@ public class TodosRestController {
             @RequestBody TodoRequestDto todoRequestDto
     ) {
         int nextId = todos.values().size() + 1;
-        Todo todo = new Todo(nextId, todoRequestDto.getTitle(), false, TodoType.valueOf(todoRequestDto.getType().toUpperCase()));
+        Todo todo = new Todo(nextId, todoRequestDto.getTitle(), false, TodoType.valueOf(todoRequestDto.getType().toUpperCase()),null);
         todos.put(todo.getId(), todo);
         return ResponseEntity.status(HttpStatus.CREATED).body(todo);
     }

@@ -19,6 +19,9 @@ public class Todo {
     private String title;
     private boolean completed;
     private TodoType todoType;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
     public Todo(String title) {
         this.title = title;
