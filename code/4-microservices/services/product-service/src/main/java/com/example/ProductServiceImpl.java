@@ -1,17 +1,30 @@
 package com.example;
 
-import com.example.api.core.product.Product;
-import com.example.api.core.product.ProductService;
-import com.example.api.exceptions.InvalidInputException;
-import com.example.api.exceptions.NotFoundException;
+import com.example.exceptions.InvalidInputException;
+import com.example.exceptions.NotFoundException;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
+
+import static org.springframework.http.HttpStatus.NOT_FOUND;
+import static org.springframework.http.HttpStatus.UNPROCESSABLE_ENTITY;
+
 @Slf4j
+@RequiredArgsConstructor
 @RestController
 public class ProductServiceImpl implements ProductService {
-    public Product getProduct(@PathVariable int productId) {
+
+
+    private final ServiceUtil serviceUtil;
+
+    @Override
+    public Product getProduct(int productId) {
         log.debug("/product return the found product for productId={}", productId);
         if (productId < 1) {
             throw new InvalidInputException("Invalid productId: " + productId);
@@ -19,6 +32,9 @@ public class ProductServiceImpl implements ProductService {
         if (productId == 13) {
             throw new NotFoundException("No product found for productId: " + productId);
         }
-        return new Product(productId, "name-" + productId, 123, null);
+        return new Product(productId, "name-" + productId, 123, serviceUtil.getServiceAddress());
     }
+
+
+
 }

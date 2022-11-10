@@ -1,7 +1,8 @@
 package com.example;
 
-import com.example.api.exceptions.InvalidInputException;
-import com.example.api.exceptions.NotFoundException;
+
+import com.example.exceptions.InvalidInputException;
+import com.example.exceptions.NotFoundException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -16,21 +17,23 @@ import static org.springframework.http.HttpStatus.UNPROCESSABLE_ENTITY;
 
 @Slf4j
 @RestControllerAdvice
-public class GlobalControllerExceptionHandler {
+class GlobalControllerExceptionHandler {
 
-    @ResponseStatus(HttpStatus.NOT_FOUND)
+
+    @ResponseStatus(NOT_FOUND)
     @ExceptionHandler(NotFoundException.class)
     public @ResponseBody HttpErrorInfo handleNotFoundExceptions(
             HttpServletRequest request, NotFoundException ex) {
 
-        return createHttpErrorInfo(HttpStatus.NOT_FOUND, request, ex);
+        return createHttpErrorInfo(NOT_FOUND, request, ex);
     }
 
-    @ResponseStatus(HttpStatus.UNPROCESSABLE_ENTITY)
+    @ResponseStatus(UNPROCESSABLE_ENTITY)
     @ExceptionHandler(InvalidInputException.class)
     public @ResponseBody HttpErrorInfo handleInvalidInputException(
             HttpServletRequest request, InvalidInputException ex) {
-        return createHttpErrorInfo(HttpStatus.UNPROCESSABLE_ENTITY, request, ex);
+
+        return createHttpErrorInfo(UNPROCESSABLE_ENTITY, request, ex);
     }
 
     private HttpErrorInfo createHttpErrorInfo(
