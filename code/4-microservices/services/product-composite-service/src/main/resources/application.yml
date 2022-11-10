@@ -1,13 +1,13 @@
 server:
-  port: 7000
+  port: 8080
 
 app:
   product-service:
-    host: localhost
-    port: 7001
+    host: product
+    port: 8080
   recommendation-service:
-    host: localhost
-    port: 7002
+    host: recommendation
+    port: 8080
   review-service:
-    host: localhost
-    port: 7003
+    host: review
+    port: 8080

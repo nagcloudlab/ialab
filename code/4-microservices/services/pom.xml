@@ -15,4 +15,12 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <modules>
+        <module>product-service</module>
+        <module>recommendation-service</module>
+        <module>review-service</module>
+        <module>product-composite-service</module>
+        <module>util</module>
+    </modules>
+
 </project>

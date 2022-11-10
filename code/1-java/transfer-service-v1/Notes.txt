@@ -1,0 +1,66 @@
+
+
+-------------------------------------------------------------------------
+
+design issues
+
+    - tight-coupling between dependent & dependency
+
+        => we can' extend appln with new-features or latest tech
+
+    - Unit-Testing not possible
+
+        => dev & bux fix slow
+
+performance issues
+
+    -  too many duplicate dependency instances created & discarded
+
+        => slow , resource consumption will be high
+
+---------------------------------------------------------------------
+
+why these issues?
+
+    => dependent managing ( creating ,.. ) it's own dependency.
+
+Solution:
+
+    => Don't create dependency in dependent's home ( class ),
+       get from Factory
+
+Limitations on Factory :
+
+    ==> Factory-Location tight-coupling
+
+Best solution:
+
+    ==> Don't create/lookup dependency in dependent's home ( class),
+        inject by 'third-party'
+
+
+        Dependency Inversion Principle or Inversion of control ( IOC )
+
+
+        How to implement above principle in coding ?
+
+            => dependency injection
+
+                different ways to inject dependency
+
+                    => thru constructor ( required dependencies )
+                    => thru set-method  ( optional dependency )
+
+---------------------------------------------------------------------
+
+SOLID a.k.a OO design principles
+
+
+The Single Responsibility Principle
+The Open for Extension-Closed for Modification Principle
+The Liskov Substitution Principle
+The Interface Segregation Principle
+The Dependency Inversion Principle
+
+
+-----------------------------------------------------------------------------
