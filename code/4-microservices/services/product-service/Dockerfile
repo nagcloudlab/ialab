@@ -1,4 +1,4 @@
-FROM openjdk:17-alpine as builder
+FROM openjdk:17-alpine as stage1
 WORKDIR extracted
 ADD ./target/*.jar app.jar
 RUN java -Djarmode=layertools -jar app.jar extract
@@ -6,11 +6,11 @@ RUN java -Djarmode=layertools -jar app.jar extract
 
 FROM openjdk:17-alpine
 WORKDIR application
-COPY --from=builder extracted/dependencies/ ./
-COPY --from=builder extracted/spring-boot-loader/ ./
-COPY --from=builder extracted/snapshot-dependencies/ ./
-COPY --from=builder extracted/application/ ./
-
+COPY --from=stage1 extracted/dependencies/ ./
+COPY --from=stage1 extracted/spring-boot-loader/ ./
+COPY --from=stage1 extracted/snapshot-dependencies/ ./
+COPY --from=stage1 extracted/application/ ./
 EXPOSE 8080
-
 ENTRYPOINT ["java", "org.springframework.boot.loader.JarLauncher"]
+
+

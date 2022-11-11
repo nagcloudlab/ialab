@@ -1,2 +1,29 @@
+
+server.port: 7003
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/review_db
+    username: root
+    password: root1234
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: docker
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc://mysql:3306/review-db
+    username: user
+    password: pwd
+
 server:
   port: 8080
+
+
