@@ -1,0 +1,18 @@
+
+
+----------------------------------------------------------------
+
+What makes UI ?
+
+    -> data + style + behavior
+
+What makes Web-UI ?
+
+    static 
+        -> HTML + CSS
+
+    dynamic
+        -> HTML + CSS + JavaScript
+
+----------------------------------------------------------------    
+
