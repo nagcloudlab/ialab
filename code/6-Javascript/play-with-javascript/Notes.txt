@@ -1,0 +1,64 @@
+
+
+
+------------------------------------------------------------------
+why we need javascript language?
+------------------------------------------------------------------
+
+
+=> it is fullstack programming language
+
+
+------------------------------------------------------------------
+javascript features
+------------------------------------------------------------------
+
+
+=>flexible to developer
+    -> dynamic programming language
+=> by default, all IO operations are asynchrnous/ non-blocking
+=> by default, single-threaded process,
+   but can execute concurrent things due to asynchrnous IO
+
+
+------------------------------------------------------------------
+javascript standarnd
+------------------------------------------------------------------
+
+=> ECMAScript community specifications
+
+  current version: ECMAScript 2022, the 13th and current version, was released in June 2022.
+
+
+ 
+------------------------------------------------------------------
+How to run javascript program ?
+------------------------------------------------------------------
+
+
+-> javascript programs directly interpreted by 
+   using javascript engine/runtime
+
+
+browser envi:
+
+    1. chrome  : Chrome V8
+    2. firefox : SpiderMonkey
+    3. IE/Edge : Chakra
+    4. Safari  : JavaScriptCore
+    .....
+
+other envi :
+
+    1. JVM     : Nashorn
+    2. Node.js : Chrome V8
+    .....
+
+
+
+------------------------------------------------------------------
+//  Hello World
+------------------------------------------------------------------
+
+   
+
