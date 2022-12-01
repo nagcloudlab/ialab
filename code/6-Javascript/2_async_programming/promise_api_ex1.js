@@ -20,7 +20,6 @@ const trainer = {
 // Manager ( dependency / producer / publisher)
 //------------------------------------------------------
 
-
 const manager = {
     getWork(sub) {
         const promise = new Promise((resolve, reject) => {
