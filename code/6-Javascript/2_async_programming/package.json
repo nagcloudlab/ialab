@@ -1,0 +1,14 @@
+{
+  "name": "2_async_programming",
+  "version": "1.0.0",
+  "description": "",
+  "main": "promise_api_ex1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "rxjs": "^7.5.7"
+  }
+}
