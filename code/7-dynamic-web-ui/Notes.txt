@@ -1,0 +1,37 @@
+
+--------------------------------------------------------------------
+
+UI => data + style + behavior
+
+static-web-ui => HTML + CSS
+dynamic-web-ui => HTML + CSS + javascript
+
+--------------------------------------------------------------------
+
+
+using javascript, what can we do in web-page?
+
+javascript + browser-apis
+
+browser-apis => implementations of w3c recommendations
+e.g => DOM, XHR, timer , etc...
+
+
+DOM API
+--------
+--> can create,update,delete,retreive HTML elements
+--> can change HTML element's style 
+--> can change HTML element's properties/attributes
+--> can listen event(s) on HTML elements
+..
+
+
+Timer
+-----
+--> can execute some action(s) on timeout/time-interval
+
+
+XHR ( XMLHTTPRequest )
+----------------------
+--> can communicate with server-side programs asynch, then update response in existing page
+

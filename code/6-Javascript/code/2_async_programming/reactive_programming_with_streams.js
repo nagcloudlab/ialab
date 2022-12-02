@@ -2,10 +2,6 @@
 const Rx = require('rxjs')
 const { filter, map, bufferCount, debounceTime } = require('rxjs/operators')
 
-
-
-
-
 //--------------------------------------------------------------------
 // Trainer
 //--------------------------------------------------------------------
