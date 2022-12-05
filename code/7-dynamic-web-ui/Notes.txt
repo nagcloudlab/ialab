@@ -8,7 +8,6 @@ dynamic-web-ui => HTML + CSS + javascript
 
 --------------------------------------------------------------------
 
-
 using javascript, what can we do in web-page?
 
 javascript + browser-apis
@@ -29,6 +28,7 @@ DOM API
 Timer
 -----
 --> can execute some action(s) on timeout/time-interval
+
 
 
 XHR ( XMLHTTPRequest )
