@@ -35,3 +35,82 @@ XHR ( XMLHTTPRequest )
 ----------------------
 --> can communicate with server-side programs asynch, then update response in existing page
 
+
+
+------------------------------------------------------------------------------------------------
+
+Front-End-developement = HTML + CSS + JAVASCRIPT + browser-apis
+
+------------------------------------------------------------------------------------------------
+
+
+
+Complexities/Limitations while using plain-javascript( your script) with browser APIs
+-------------------------------------------------------------------------------------
+
+
+
+==> browser compatability issues
+==> performance issues ( minimal DOM access)
+==> memory issues ( clean unwanted DOM elements )
+==> too much tight-coupling b/w style & behav
+==> code re-usability issues
+...
+
+
+legacy solution:
+
+
+==> using server-side page techonologies
+
+    - JSP, ASP, PHP , ....
+
+    issues:
+
+    => on every request, server-side programs re-construct the page keeping the client-state
+    => on every response, server pushing same static resources ( css, image , font ), that increases n/w bandwidth    
+    => on every response, browser re-loading current page with new-page, that irritaes modern-users
+
+
+modern solution:
+
+==> using client-side page techonologies
+
+    How >
+
+    => using latest javascript version(s)
+    => modern browsers has standard apis ( at most )
+
+    +
+
+    ==> third-party's javascript lib + frameworks
+
+
+
+javascript lib & frameworks
+
+
+1. Jquery
+    => just DOM & XHR utility lib
+
+MVC pattern bases javascript lib & framework
+
+2. backbone.js
+3. knockoutjs
+4. Ember.js
+5. dojo toolkit
+6. EXT.JS from sencha ( commercial )
+7. Angular.js  from google team + community 
+
+    -> easy to use
+    -> 2-way databinding
+
+
+component based arch for UI
+
+
+1. react.js from facebook+team + community
+2. angular from google-team + community
+3. Vue.js
+4. Solidjs
+..

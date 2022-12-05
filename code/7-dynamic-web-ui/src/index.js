@@ -31,10 +31,10 @@ showBtn.addEventListener('click', e => {
 
 
 // setTimeout, setInterval
-
+const timeSpanEle = document.querySelector("#timeSpan")
 setInterval(() => {
     let timeNow = new Date().toLocaleTimeString('en-US', { timeZone: "Asia/Kolkata" });
-    document.querySelector("#timeSpan").innerText = timeNow
+    timeSpanEle.innerText = timeNow
 }, 1000);
 
 
@@ -45,36 +45,6 @@ setInterval(() => {
 //------------------------------------------------
 
 const topFiveTodosBtn = document.querySelector('#top-five-todos-btn')
-
-
-// XHR API
-// topFiveTodosBtn.addEventListener('click', e => {
-//     var xhttp = new XMLHttpRequest();
-//     var url = "https://jsonplaceholder.typicode.com/todos?_limit=5"
-//     xhttp.open("GET", url, true);
-//     xhttp.send();
-//     document.getElementById("progress-message").innerText = "Loading todos"
-
-//     xhttp.onreadystatechange = () => {
-//         if (xhttp.readyState == 4) {
-//             document.getElementById("progress-message").innerText = ""
-//             const jsonText = xhttp.responseText;
-//             const todos = JSON.parse(jsonText);
-//             const rows = todos.map(todo => {
-//                 let row = `
-//             <tr>
-//                 <td>${todo.id}</td>
-//                 <td>${todo.title}</td>
-//                 <td>${todo.completed}</td>
-//             </tr>
-//         `
-//                 return row
-//             })
-//             document.getElementById('todos-table-body').innerHTML = rows.join('')
-//         }
-//     }
-
-// });
 
 
 topFiveTodosBtn.addEventListener('click', e => {
