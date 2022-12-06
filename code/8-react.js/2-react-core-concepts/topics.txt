@@ -1,3 +1,20 @@
 
 
 -> what is component
+
+    => UI fragment with single responsibility
+
+-> props
+
+    => any imput-data from outside
+    => immutable
+
+-> state
+
+    => data on component
+    => mutable
+    => on state change, component always re-render
+
+-> life-cycle    
+
+    
