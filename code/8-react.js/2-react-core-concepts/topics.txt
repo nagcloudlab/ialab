@@ -17,4 +17,6 @@
 
 -> life-cycle    
 
-    
+-> array of react-elements
+
+-> 'children' property

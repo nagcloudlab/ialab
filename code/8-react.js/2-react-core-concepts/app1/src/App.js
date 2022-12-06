@@ -1,10 +1,20 @@
 import React from 'react'
+import Box from './Box';
+import List from './List';
 import Message from './Message';
+import Veg from './Veg';
+import NonVeg from './NonVeg'
 
 class App extends React.Component {
 
   state = {
-    message: 'greetings'
+    message: 'greetings',
+    topics: [
+      "java",
+      "spring",
+      "microservices",
+      "javascript"
+    ]
   }
 
   constructor(props) {
@@ -22,11 +32,27 @@ class App extends React.Component {
   render() {
     console.log("App :: render");
     let { title, version } = this.props;
-    let { message } = this.state;
+    let { message, topics } = this.state;
     return (
       <div className='container' style={{ border: '1px solid red' }}>
         <hr />
         <div className='display-1'>{title}-{version}</div>
+        <hr />
+        <Box>
+          <h1>foo</h1>
+          <h1>bar</h1>
+        </Box>
+        <Box>
+          <NonVeg />
+          <NonVeg />
+          <NonVeg />
+        </Box>
+        <Box>
+          <Veg />
+          <Veg />
+        </Box>
+        <hr />
+        <List value={topics} />
         <hr />
         <div className='d-flex justify-content-around'>
           <button onClick={e => this.handleEvent(e, 'Foo')} className='btn btn-dark'>Foo</button>
@@ -36,6 +62,7 @@ class App extends React.Component {
         </div>
         <hr />
         {message ? <Message value={message} /> : null}
+        <hr />
       </div>
     )
   }

@@ -26,10 +26,10 @@ class Message extends React.PureComponent {
 
     componentDidMount() {
         console.log("Message :: componentDidMount");
-        this._interval = setInterval(() => {
-            console.log("tick");
-            this.forceUpdate()
-        }, 1000);
+        // this._interval = setInterval(() => {
+        //     console.log("tick");
+        //     //this.forceUpdate()
+        // }, 1000);
     }
 
     // shouldComponentUpdate(nextProps, nextState) {
