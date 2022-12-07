@@ -29,6 +29,7 @@ class App extends React.Component {
       message
     })
   }
+
   render() {
     console.log("App :: render");
     let { title, version } = this.props;
@@ -39,14 +40,10 @@ class App extends React.Component {
         <div className='display-1'>{title}-{version}</div>
         <hr />
         <Box>
-          <h1>foo</h1>
-          <h1>bar</h1>
-        </Box>
-        <Box>
-          <NonVeg />
           <NonVeg />
           <NonVeg />
         </Box>
+        <hr />
         <Box>
           <Veg />
           <Veg />
