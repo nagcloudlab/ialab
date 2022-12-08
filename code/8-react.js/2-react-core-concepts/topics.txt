@@ -4,10 +4,8 @@ react core concepts
 -------------------------
 
 app1
-
     -> what is component
         => UI fragment with single responsibility
-
     -> props
         => any imput-data from outside
         => immutable
@@ -16,22 +14,23 @@ app1
         => data on component
         => mutable
         => on state change, component always re-render
-
     -> life-cycle    
 
 
 app2
-
     -> thinking-in-react
 
-
 app3
-
     -> class vs funcion syntax components
     -> patterns 
         - hoc ( higher-order-components)
         - render-props
-    -> context    
-        
-        
+    -> context  
+    -> forms   
+    -> fragments
+            
+app3
+    -> hooks
+
+
 

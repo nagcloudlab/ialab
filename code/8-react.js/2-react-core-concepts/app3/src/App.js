@@ -41,7 +41,7 @@ function App() {
   return (
     <div className='container'>
       <hr />
-      <h1>react advanced concepts</h1>
+      <h1>react bytes</h1>
       <hr />
 
       <ReviewForm />
