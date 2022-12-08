@@ -1,5 +1,5 @@
 import React from 'react';
-import { withCard } from '../hoc/withCard';
+import { withCard } from './withCard';
 
 function Bar(props) {
     return (

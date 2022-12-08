@@ -3,7 +3,6 @@
 react core concepts
 -------------------------
 
-
 app1
 
     -> what is component
@@ -32,5 +31,7 @@ app3
     -> patterns 
         - hoc ( higher-order-components)
         - render-props
+    -> context    
+        
         
 

@@ -2,6 +2,7 @@
 
 // HOF / HOC
 function withCard(InputComponent) {
+
     function Container(props) {
         return (
             <div className="card">
@@ -12,7 +13,8 @@ function withCard(InputComponent) {
             </div>
         )
     }
-    Container.displayName = `${InputComponent.name}-Card`
+
+    Container.displayName = `${InputComponent.name}-Card` // for dev-tools
     return Container
 }
 
