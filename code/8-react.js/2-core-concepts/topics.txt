@@ -29,8 +29,30 @@ app3
     -> forms   
     -> fragments
             
-app3
+app4
+
     -> hooks
 
+        state management hooks
+
+            1. useState
+            2. useReducer
+
+        side effects hooks
+
+            3. useEffect === componentDidMount+componentDidUpdate+componentWillUnmount
+
+        context read hook
+
+            4. useContext        
+
+        ref hook
+
+            5. useRef
+
+       performance boost hook
+
+            6. useMemo
+            7. useCallback     
 
 
