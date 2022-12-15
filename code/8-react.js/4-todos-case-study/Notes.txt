@@ -1,0 +1,62 @@
+
+-----------------------------------------------------------------------------------
+
+developer's complexities with react-only
+    => state management on components
+
+
+solution:
+    => manage state outside react-components
+    state management lib 
+        ==> REDUX
+
+-----------------------------------------------------------------------------------        
+
+Redux state management lib principles
+
+
+    => keep all UI state in one-place ( i.e immutable store )
+    => trigger state change with action(s)
+    => process action(s) with 'reducer' function
+
+
+    what is reducer function ?
+
+    ==> a function which will never do any mutable operations
+
+
+-----------------------------------------------------------------------------------        
+
+
+
+
+steps to use redux
+---------------------
+
+    1. know/identity UI application state
+
+    2. know/identity 'actions' which trigger state-change
+
+    3. define 'reducer'(s) to process action, and to make new-state
+
+    4. combine multiple reducer(s) as one root-reducer
+
+    5. create store with root-reducer
+
+
+-----------------------------------------------------------------------------------    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
