@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
+@CrossOrigin(origins = {"*"})
 @RequiredArgsConstructor
 public class TodosRestController {
 
@@ -25,7 +26,6 @@ public class TodosRestController {
         todos.put(2, new Todo(2, "Learn Java", false, TodoType.OFFICE,null));
         todos.put(3, new Todo(3, "Learn React", false, TodoType.OFFICE,null));
         todos.put(4, new Todo(4, "Learn Microservices", false, TodoType.OFFICE,null));
-        todos.put(5, new Todo(5, "get rice bag", false, TodoType.HOME,null));
     }
 
     // Read
@@ -131,7 +131,7 @@ public class TodosRestController {
     @DeleteMapping(
             value = "/api/v1/todos/{id}"
     )
-    public /*@ResponseBody*/ ResponseEntity<?> createOrUpdateTodo(
+    public /*@ResponseBody*/ ResponseEntity<?> deleteTodo(
             @PathVariable(name = "id", required = true) int id
     ) {
         if (todos.containsKey(id)) {

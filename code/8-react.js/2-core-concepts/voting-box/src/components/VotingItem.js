@@ -23,7 +23,7 @@ function VotingItem({ value, votingLine, onVote }) {
                 <span>{votingLine.dislikes} dislikes</span>
             </div>
             <hr />
-            <div className='d-flex'>
+            <div className='d-flex justify-content-around'>
                 <button
                     className='btn btn-success'
                     onClick={e => handleLikeEvent(e)}
