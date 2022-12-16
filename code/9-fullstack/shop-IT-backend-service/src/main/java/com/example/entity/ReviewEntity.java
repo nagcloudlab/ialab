@@ -1,7 +1,10 @@
 package com.example.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+import lombok.Data;
 
+@Data
 @Entity
 @Table(name = "reviews")
 public class ReviewEntity {
@@ -12,6 +15,7 @@ public class ReviewEntity {
     private int stars;
     private String body;
     private String author;
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "product_id")
     private ProductEntity product;
