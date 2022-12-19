@@ -67,11 +67,11 @@ const rootReducer = combineReducers({
     products: productsReducer,
 });
 
-const initialState = {
-    cart: {},
-    reviews: {},
-    products: []
-}
+// const initialState = {
+//     cart: {},
+//     reviews: {},
+//     products: []
+// }
 
 const store = createStore(rootReducer, applyMiddleware(thunk))
 

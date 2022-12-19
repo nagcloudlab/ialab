@@ -1,11 +1,15 @@
 package com.example.service;
 
-import com.example.entity.Feedback;
+import com.example.api.dto.FeedbackDto;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 public interface FeedbackService {
-    void save(Feedback feedback);
+
+    FeedbackDto save(FeedbackDto feedbackDto);
 
     @Transactional(readOnly = true)
-    Iterable<Feedback> getAll();
+    List<FeedbackDto> getAll();
+
 }
