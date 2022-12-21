@@ -1,0 +1,11 @@
+version: '2.1'
+
+services:
+  api-server:
+    build: api-server
+    ports:
+      - "8080:8080"
+  ui:
+    build: ui
+    ports:
+      - "80:80"
