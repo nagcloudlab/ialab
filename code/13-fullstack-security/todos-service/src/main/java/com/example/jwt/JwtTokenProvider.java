@@ -1,6 +1,6 @@
 package com.example.jwt;
 
-
+//
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -39,9 +39,9 @@ public class JwtTokenProvider {
 
     public String generateToken(UserDetails userDetails) {
         Map<String, Object> claims = new HashMap<>();
-        return createToken(claims, userDetails.getUsername());
+        return createToken(userDetails.getUsername(),claims);
     }
-    private String createToken(Map<String, Object> claims, String subject) {
+    private String createToken(String subject,Map<String, Object> claims) {
         return Jwts.builder()
                 .setClaims(claims)
                 .setSubject(subject)

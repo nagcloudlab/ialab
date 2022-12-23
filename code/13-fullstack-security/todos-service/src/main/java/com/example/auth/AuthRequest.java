@@ -1,2 +1,11 @@
-package com.example.auth;public class AuthRequest {
+package com.example.auth;
+
+import lombok.Data;
+
+@Data
+public class AuthRequest {
+
+    private String username;
+    private String password;
+
 }
